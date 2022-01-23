@@ -26,7 +26,7 @@ def dept(id):
     is_exist = False
     if id != None:
         for item in department:
-            if id == str(item['id']):
+            if id == item['id']:
                 is_exist = True
                 result = item
                 break
@@ -64,7 +64,7 @@ def classOfGeneralById(id):
     is_exist = False
     if id != None:
         for item in class_of_general:
-            if id == item['id']:
+            if id == str(item['id']):
                 is_exist = True
                 result = item
                 break
