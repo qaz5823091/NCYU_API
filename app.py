@@ -1,8 +1,10 @@
 from flask import Flask, render_template, json, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
 # app.config['DEBUG'] = True
 app.config['JSON_AS_ASCII'] = False
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 with open('./department.json') as file:
     department = json.load(file)
